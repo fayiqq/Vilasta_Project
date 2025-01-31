@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <% layout('layouts/boilerplate') %>
+    <div class="col-6 offset-3" >
+    <h4>Enter the Details</h4>
+    <form method="post" action="http://localhost:3000/listing/<%=listing._id%>?_method=PUT">
+        <div class="mb-3">
+            <label for="title" class="form-label"> Title</label>
+            <input value="<%=listing.title%>" name="title" type="text" class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label"> Description</label>
+            <textarea name="description"  class="form-control"><%=listing.description%></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label"> Price</label>
+            <input value="<%=listing.price%>" name="price" type="number" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label"> Location</label>
+            <input value="<%=listing.location%>" name="location" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input value="<%=listing.country%>" name="country" type="text" class="form-control">
+        </div>
+       
+        <button class="btn btn-secondary mb-2">Edit</button>
+    </div>
+    </form>
+</body>
+</html>

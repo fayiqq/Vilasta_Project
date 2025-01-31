@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <% layout('layouts/boilerplate') %>
+  
+   
+    <!-- <form method="get" action="http://localhost:3000/listing/new">
+        <button>Create New Listing</button>
+    </form> -->
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3" >
+        <%for(let listing of allListing){%>
+
+            <a href="/listing/<%=listing._id%>"  class="listing-link">
+
+                <div class="card col  listing-card "  >
+
+                    <img src="<%=listing.image.url%>" class="card-img-top" alt="Listing-I" style="height: 18rem;">
+
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"><small></small></p>
+                      </div>
+
+                    <div class="card-body">
+
+                      <p class="card-text">
+
+                        <b><%=listing.title%> </b> <br>
+                        &#8377 <%=listing.price.toLocaleString("en-IN")%> /night</p>
+
+                    </div>
+                  </div>
+
+            </a>
+          
+            <%}%>
+
+    </div>
+    
+   
+</body>
+</html>
