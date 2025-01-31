@@ -57,7 +57,7 @@
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cancel</button>
                                     <form method="post"
-                                        action="http://localhost:3000/listing/<%=listing._id%>?_method=DELETE"
+                                        action="/listing/<%=listing._id%>?_method=DELETE"
                                         class="btn offset-4 ">
                                         <button class="btn btn-danger" id="confirmDelete">Delete</button>
                                     </form>
@@ -67,7 +67,7 @@
                     </div>
                     &nbsp; &nbsp;
                     
-                    <form method="get" action="http://localhost:3000/listing/<%=listing._id%>/edit">
+                    <form method="get" action="/listing/<%=listing._id%>/edit">
                         <button class="btn btn-dark">Edit</button>
                     </form>
 
