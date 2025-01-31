@@ -6,5 +6,5 @@
       "use": "@vercel/node"
     }
   ],
-  "start": "node index.js"
+
 }
