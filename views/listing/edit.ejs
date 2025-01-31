@@ -9,7 +9,7 @@
     <% layout('layouts/boilerplate') %>
     <div class="col-6 offset-3" >
     <h4>Enter the Details</h4>
-    <form method="post" action="http://localhost:3000/listing/<%=listing._id%>?_method=PUT">
+    <form method="post" action="/listing/<%=listing._id%>?_method=PUT">
         <div class="mb-3">
             <label for="title" class="form-label"> Title</label>
             <input value="<%=listing.title%>" name="title" type="text" class="form-control" >
