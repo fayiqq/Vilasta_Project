@@ -115,3 +115,7 @@ body{
 .show-img{
     height: 30vh;
 } */
+
+#navbarNavAltMarkup{
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
