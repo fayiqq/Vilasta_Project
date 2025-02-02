@@ -7,6 +7,12 @@ const Review = require("../models/review");
 const {isLogged}=require("../middleware.js");
 const {isAuthor}=require("../middleware.js");
 
+//show review(actual url /listing/:id/review)
+routes.get("/",(req,res)=>{
+    let{id}=req.params;
+    res.redirect(`/listing/${id}`)
+})
+
 
 //post review
 routes.post("",isLogged,wrapAsync(async(req,res)=>{

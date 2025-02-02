@@ -7,7 +7,7 @@ const Review=require("./models/review.js")
 module.exports.isLogged=(req,res,next)=>{
     if(!req.isAuthenticated()){
         req.session.returnTo = req.originalUrl;
-        console.log( req.session.returnTo)
+      
         req.flash("error","You need to login first");
         return res.redirect("/login");
     }
